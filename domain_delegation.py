@@ -24,7 +24,7 @@ the documentation at https://developers.google.com/+/domains/.
 Changelog:
 - 2017-12-29: 
 --- Update authenticate() to use JSON credentials.
---- Update SERVICE_ACCOUNT_EMAIL example with new service account email format.
+--- Remove SERVICE_ACCOUNT_EMAIL, as it's not necessary for JSON authentication.
 ---- Replace references to SERVICE_ACCOUNT_PKCS12_FILE_PATH with SERVICE_ACCOUNT_JSON_FILE_PATH.
 """
 
@@ -36,10 +36,6 @@ import pprint
 from apiclient.discovery import build
 
 from oauth2client.service_account import ServiceAccountCredentials
-
-# Update SERVICE_ACCOUNT_EMAIL with the email address of the service account for
-# the client id created in the developer console.
-SERVICE_ACCOUNT_EMAIL = '<some-id>@<some-project-id>.iam.gserviceaccount.com'
 
 # Update SERVICE_ACCOUNT_JSON_FILE_PATH with the file path to the private key
 # file downloaded from the developer console.
